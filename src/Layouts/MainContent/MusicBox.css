@@ -14,6 +14,13 @@
   vertical-align: middle;
 }
 
-.active {
-  background-color: lightgreen;
+.MuseNetComponent{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.MuseNetComponent div{
+  vertical-align: middle;
+  padding: 5px;
 }

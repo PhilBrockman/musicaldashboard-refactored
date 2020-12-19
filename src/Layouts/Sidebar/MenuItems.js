@@ -20,6 +20,7 @@ class InteractiveMenuItem extends Component {
       <div key={"interactive-"+this.props.title}
            className={style}
            onClick={this.handleClick}>
+           <Icon color="primary">add_circle</Icon>
           {this.props.children}
       </div>
     );

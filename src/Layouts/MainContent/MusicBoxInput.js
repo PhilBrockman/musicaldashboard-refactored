@@ -1,9 +1,7 @@
-import "./MusicBox.css"
-
 import Slider from '@material-ui/core/Slider';
 import React, {Component} from 'react'
 
-import defaults from './defaultMenuItems'
+import defaults from '../../defaultMenuItems'
 const options = defaults.to_arr(defaults.menu_items())
 
 class MusicBoxInput extends Component {
@@ -67,10 +65,12 @@ class MusicBoxInput extends Component {
         return(
           <div>
             <select
+              className="select"
               value={this.props.item.value}
               onChange={event => this.handleSelectionChange(event)} >
               {option_list}
             </select>
+            <span className="focus"></span>
           </div>
         );
       }if(specific_item.inputType === "checkboxinput"){

@@ -1,13 +1,13 @@
 
 import './App.css';
-import "./Layouts/SideBar.css"
+import "./Layouts/Sidebar/SideBar.css"
 
-import Header from './Layouts/Header';
-import MenuItems from "./Layouts/MenuItems"
-import MusicBox from "./Layouts/MusicBox"
+import Header from './Layouts/Header/Header';
+import MenuItems from "./Layouts/Sidebar/MenuItems"
+import MusicBox from "./Layouts/MainContent/MusicBox"
 import React, {Component} from 'react'
 
-import defaults from './Layouts/defaultMenuItems'
+import defaults from './defaultMenuItems'
 
 class App extends Component {
   constructor (props){
@@ -23,8 +23,6 @@ class App extends Component {
   }
 
   handleMenuItemDismissal(title){
-    console.log("swapping states: " + title);
-
     let newMenuItemsState = Object.assign([], this.state.menuItems);
     const itemIdx = newMenuItemsState.findIndex(item => item.title===title);
 
@@ -42,8 +40,6 @@ class App extends Component {
   }
 
   updateMenuItemValue(title, newValue){
-    console.log ("updating value: " + title + "|" + newValue);
-
     let newMenuItemsState = Object.assign([], this.state.menuItems);
     const itemIdx = newMenuItemsState.findIndex(item => item.title===title);
 

@@ -1,5 +1,9 @@
 import Input from '@material-ui/core/Input';
 import Button from '@material-ui/core/Button';
+import RemoveCircle from '@material-ui/icons/RemoveCircle';
+import NotListedLocationTwoToneIcon from '@material-ui/icons/NotListedLocationTwoTone';
+
+import TransitionHover from './IconHovered'
 
 import "./MusicBox.css";
 import "./checkbox.scss";
@@ -20,21 +24,28 @@ class MuseNetInput extends Component {
   }
 
   render(){
-    const style = this.props.stowed ? "interactive exit" : "interactive";
-
     return (
-      <span>
-        <div key={"interactive-"+this.props.item.title}
-             className={style}
-             onClick={this.handleClick}>
-             X
+      <div>
+        <div className="MuseNetComponent">
+          <div key={"interactive-"+this.props.item.title}
+               onClick={this.handleClick}>
+               <RemoveCircle color="secondary" />
+          </div>
+          <div>
+            {this.props.item.title}
+          </div>
+          <div>
+          <TransitionHover>add_circle</TransitionHover>
+          </div>
+          <div>
+            <NotListedLocationTwoToneIcon fontSize="large" color="primary" />
+          </div>
         </div>
-        {this.props.item.title}
         <MusicBoxInput
           item={this.props.item}
           updateValue={this.updateValue}
           />
-      </span>
+      </div>
     );
   }
 }
@@ -48,7 +59,6 @@ class MusicBox extends Component {
   }
 
   render() {
-    console.log(this.props.invokedMenuItems)
     const relevant = this.props.invokedMenuItems.map(item => {
       return(
           <MuseNetInput

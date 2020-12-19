@@ -9,7 +9,9 @@
   height:auto;
   flex: 1;
   color: white;
-  transform: scaleY(1)
+  transform: scaleY(1);
+  display:flex;
+  align-items: center;
 }
 
 .exit {
