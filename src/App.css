@@ -1,0 +1,20 @@
+.content-area {
+  background-color: #6A0174;
+  display:flex;
+}
+
+.interactive{
+  overflow: hidden;
+  transition: all 0.3s ease-out;
+  height:auto;
+  flex: 1;
+  color: white;
+  transform: scaleY(1)
+}
+
+.exit {
+  background-color: blue;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.26s ease;
+}

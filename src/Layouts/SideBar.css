@@ -1,0 +1,13 @@
+.sidebar.open {
+    width: 220px;
+}
+.sidebar.closed {
+  width: 50px;
+}
+
+.sidebar {
+  background-color:aquamarine;
+  margin-top: 10px;
+  transition: width .6s;
+  transition-timing-function: ease;
+}

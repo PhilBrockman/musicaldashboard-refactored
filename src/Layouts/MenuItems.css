@@ -1,0 +1,27 @@
+.menuItem {
+  color:green;
+  background-color: cyan;
+  padding: 5px;
+  min-height: 0;
+  background-color: grey;
+  transform-origin: top;
+  transition: transform 0.26s ease;
+}
+
+div.label {
+  display: flex;
+  color:maroon;
+  align-items: center;
+  background-color:orange;
+  padding: 5px;
+}
+
+div.offset {
+  padding-left: 10px;
+}
+
+.menuItemContainer {
+
+  margin: 0;
+  border-style: outset;
+}
