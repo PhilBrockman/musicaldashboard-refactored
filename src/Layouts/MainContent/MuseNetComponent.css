@@ -1,0 +1,8 @@
+.MuseNetComponent{
+  background-color: gray;
+  padding: 5px;
+  margin: 5px;
+  min-width: 299px;
+  flex-grow: 1;
+
+}

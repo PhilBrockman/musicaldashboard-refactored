@@ -19,13 +19,11 @@ const customTheme = createMuiTheme({
 const StyledIcon = styled(Icon)`
   ${({ theme }) => `
   cursor: pointer;
-  background-color: ${theme.palette.primary.main};
-  transition: ${theme.transitions.create(['background-color', 'transform'], {
+  transition: ${theme.transitions.create(['transform'], {
     duration: theme.transitions.duration.standard,
   })};
   &:hover {
-    background-color: ${theme.palette.secondary.main};
-    transform: scale(1.3);
+    transform: scale(1.5);
   }
   `}
 `;

@@ -7,6 +7,7 @@ import TransitionHover from './IconHovered'
 
 import "./MusicBox.css";
 import "./checkbox.scss";
+import "./MuseNetComponent.css"
 import MusicBoxInput from "./MusicBoxInput";
 
 import React, {Component} from 'react';
@@ -25,20 +26,23 @@ class MuseNetInput extends Component {
 
   render(){
     return (
-      <div>
-        <div className="MuseNetComponent">
-          <div key={"interactive-"+this.props.item.title}
-               onClick={this.handleClick}>
-               <RemoveCircle color="secondary" />
+      <div className="MuseNetComponent">
+        <div className="mnc-header centered-header">
+          <div>
+            <TransitionHover>
+              <RemoveCircle
+                color="secondary"
+                key={"interactive-"+this.props.item.title}
+                onClick={this.handleClick} />
+            </TransitionHover>
           </div>
           <div>
             {this.props.item.title}
           </div>
           <div>
-          <TransitionHover>add_circle</TransitionHover>
-          </div>
-          <div>
-            <NotListedLocationTwoToneIcon fontSize="large" color="primary" />
+            <TransitionHover>
+              <NotListedLocationTwoToneIcon color="primary" />
+            </TransitionHover>
           </div>
         </div>
         <MusicBoxInput
@@ -59,7 +63,7 @@ class MusicBox extends Component {
   }
 
   render() {
-    const relevant = this.props.invokedMenuItems.map(item => {
+    let relevant = this.props.invokedMenuItems.map(item => {
       return(
           <MuseNetInput
             key={"input-"+item.title}
@@ -70,18 +74,23 @@ class MusicBox extends Component {
       );
     })
 
+    if(relevant.length === 0){
+      relevant =
+        (<div className="placeholder">Customize your song</div>);
+    }
+
     return (
       <div className="music-box">
+        <div className="submit-form centered-header">
+          <Input
+            placeholder="Enter email..."
+            />
+          <Button
+            variant="contained"
+            color="primary">
+            create</Button>
+        </div>
         <div className="playarea">
-          <div className="submit-form">
-            <Input
-              placeholder="Enter email..."
-              />
-            <Button
-              variant="contained"
-              color="primary">
-              Gogo</Button>
-          </div>
           {relevant}
         </div>
       </div>

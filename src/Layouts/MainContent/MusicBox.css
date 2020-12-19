@@ -4,23 +4,45 @@
   margin: 27px;
   border-radius: 15px;
   display:flex;
+  flex-direction: column;
+  transform-origin: bottom;
+  transition: transform 0.26s ease;
 }
 
 .playarea {
+  align-items: center;
+  justify-content: center;
   border-radius: 20px;
   margin: 10px;
   background-color: aqua;
   flex-grow: 1;
   vertical-align: middle;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.MuseNetComponent{
-  display:flex;
-  flex-direction: row;
+.centered-header {
+  text-align: center;
+  background-color:green;
+  display: flex;
   align-items: center;
+  justify-content: center;
 }
 
-.MuseNetComponent div{
-  vertical-align: middle;
+.centered-header div {
+  margin: 3px;
   padding: 5px;
+}
+
+.submit-form{
+  zoom: 2.5;
+  -moz-transform: scale(2.5);
+  -moz-transform-origin: 0 0;
+}
+
+.placeholder{
+  zoom: 2.5;
+  -moz-transform: scale(2.5);
+  -moz-transform-origin: 0 0;
+  color: gray;
 }
