@@ -79,19 +79,24 @@ class MusicBoxInput extends Component {
           const style = Array.isArray(current_value) && current_value.includes(option) ? "active" : "inactive";
 
           return(
-            <div
-              key={"checkbox-"+option}
-              className={style}>
-                <input
-                  type="checkbox"
-                  id={option}
-                  value={option}
-                  onChange={(event) => this.handleCheckboxChange(event, current_value)}
-                  checked={style==="active"} />
-                <label className="custom-control-label" htmlFor={option}>
-                  {option}
-                </label>
-            </div>
+            <label key={"checkbox-"+option} className="checkbox">
+              <span className="checkbox__input">
+              <input
+                type="checkbox"
+                id={option}
+                value={option}
+                onChange={(event) => this.handleCheckboxChange(event, current_value)}
+                checked={style==="active"}
+                name="checkbox"/>
+                <span className="checkbox__control">
+                  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                    <path fill='none' stroke='currentColor' strokeWidth='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' /></svg>
+                </span>
+              </span>
+              <label className="radio__label" htmlFor={option}>
+                {option}
+              </label>
+            </label>
           );
         });
         return (
