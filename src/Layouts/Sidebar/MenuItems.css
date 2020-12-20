@@ -6,6 +6,8 @@
   transition: transform 0.26s ease;
   background-color:#482880;
   color:#ffee33;
+  border-radius: 15px;
+  margin: 5px;
 }
 
 div.label {
@@ -27,6 +29,7 @@ div.offset {
     transform-origin: top;
     transition: transform 0.26s ease;
     justify-content: space-evenly;
+    border-radius: 15px;
   }
 
   div.label {
