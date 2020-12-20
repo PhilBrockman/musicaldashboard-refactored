@@ -28,7 +28,7 @@
     flex: 50%;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 600px) {
   .header {
       background: purple;
       order: 1;
