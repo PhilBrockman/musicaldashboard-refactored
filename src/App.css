@@ -9,12 +9,12 @@
     flex: 0 0 100%;
 }
 .header-content{
-  background-color: red;
   display: flex;
   align-items: center;
 }
 .header div {
-  background-color: green;
+  background-color: #482880;
+  color: #ffee33;
 }
 
 
@@ -51,7 +51,7 @@
       flex: 100%;
   }
   .header {
-    background-color: red;
+    background-color: #81c784;
     align-items: flex-start;
   }
 }

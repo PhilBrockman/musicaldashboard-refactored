@@ -8,7 +8,7 @@ import React, {Component} from 'react'
 
 class Header extends Component {
   render(){
-    let conditional_icon = this.props.sidebarOpen ? <FormatIndentDecrease />: <FormatIndentIncrease />;
+    let conditional_icon = this.props.sidebarOpen ? <FormatIndentDecrease color="secondary"/>: <FormatIndentIncrease color="secondary"/>;
 
     return (
       <div className="header">
