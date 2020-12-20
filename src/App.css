@@ -33,14 +33,20 @@
       order: 1;
       display: flex;
       align-items: center;
-      flex: 0;
+      flex: 1 39px;
+      flex-grow: 0;
   }
-  .sidebar {
+  .sidebar.open{
+    flex-grow: 1;
+    justify:right;
+
+  }
+  .sidebar.closed {
       background: salmon;
       order: 2;
-      flex: 1;
-      flex-wrap:wrap;
+      flex:  1 ;
       flex-direction: row;
+      flex-grow:8;
   }
   .content-area {
       background: tan;

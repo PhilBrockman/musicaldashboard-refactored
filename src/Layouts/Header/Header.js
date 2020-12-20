@@ -1,7 +1,9 @@
 import IconButton from '@material-ui/core/IconButton';
 import FormatIndentIncrease from '@material-ui/icons/FormatIndentIncrease';
 import FormatIndentDecrease from '@material-ui/icons/FormatIndentDecrease';
+import Mood from  '@material-ui/icons/Mood';
 import React, {Component} from 'react'
+
 
 
 class Header extends Component {
@@ -14,7 +16,7 @@ class Header extends Component {
           <IconButton onClick={this.props.toggleSidebar} className="sidebar-toggle">{conditional_icon}</IconButton>
         </div>
         <div>
-          1click2music.com
+          <Mood />
         </div>
       </div>
     );

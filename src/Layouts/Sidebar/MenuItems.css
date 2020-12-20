@@ -1,6 +1,4 @@
 .menuItem {
-  color:green;
-  background-color: cyan;
   padding: 5px;
   min-height: 0;
   background-color: grey;
@@ -22,4 +20,29 @@ div.offset {
 
 .menuItemContainer {
   border-style: outset;
+}
+
+@media screen and (max-width: 700px) {
+  .menuItem {
+    transform-origin: top;
+    transition: transform 0.26s ease;
+    justify-content: space-evenly;
+  }
+
+  div.label {
+    flex-direction: row;
+    display: flex;
+    color:white;
+    align-items: center;
+    background-color:black;
+    justify-content: space-evenly;
+  }
+
+  div.offset {
+    padding-left: 10px;
+  }
+
+  .menuItemContainer {
+    border-style: none;
+  }
 }

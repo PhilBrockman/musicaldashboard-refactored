@@ -111,11 +111,7 @@ class MenuItems extends Component {
       </MenuItem>
     ));
 
-    return (
-      <div>
-        {items}
-      </div>
-    );
+    return items;
   }
 }
 
