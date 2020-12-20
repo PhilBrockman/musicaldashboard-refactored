@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/musicaldashboard-refactored/static/css/main.6dd46b3d.chunk.css",
-    "main.js": "/musicaldashboard-refactored/static/js/main.ec10d8dc.chunk.js",
-    "main.js.map": "/musicaldashboard-refactored/static/js/main.ec10d8dc.chunk.js.map",
-    "runtime-main.js": "/musicaldashboard-refactored/static/js/runtime-main.c6ecaed8.js",
-    "runtime-main.js.map": "/musicaldashboard-refactored/static/js/runtime-main.c6ecaed8.js.map",
-    "static/js/2.e77068e9.chunk.js": "/musicaldashboard-refactored/static/js/2.e77068e9.chunk.js",
-    "static/js/2.e77068e9.chunk.js.map": "/musicaldashboard-refactored/static/js/2.e77068e9.chunk.js.map",
-    "static/js/3.70feac88.chunk.js": "/musicaldashboard-refactored/static/js/3.70feac88.chunk.js",
-    "static/js/3.70feac88.chunk.js.map": "/musicaldashboard-refactored/static/js/3.70feac88.chunk.js.map",
-    "index.html": "/musicaldashboard-refactored/index.html",
-    "static/css/main.6dd46b3d.chunk.css.map": "/musicaldashboard-refactored/static/css/main.6dd46b3d.chunk.css.map",
-    "static/js/2.e77068e9.chunk.js.LICENSE.txt": "/musicaldashboard-refactored/static/js/2.e77068e9.chunk.js.LICENSE.txt"
+    "main.css": "/static/static/css/main.6dd46b3d.chunk.css",
+    "main.js": "/static/static/js/main.ec10d8dc.chunk.js",
+    "main.js.map": "/static/static/js/main.ec10d8dc.chunk.js.map",
+    "runtime-main.js": "/static/static/js/runtime-main.2d999540.js",
+    "runtime-main.js.map": "/static/static/js/runtime-main.2d999540.js.map",
+    "static/js/2.13a848ae.chunk.js": "/static/static/js/2.13a848ae.chunk.js",
+    "static/js/2.13a848ae.chunk.js.map": "/static/static/js/2.13a848ae.chunk.js.map",
+    "static/js/3.70feac88.chunk.js": "/static/static/js/3.70feac88.chunk.js",
+    "static/js/3.70feac88.chunk.js.map": "/static/static/js/3.70feac88.chunk.js.map",
+    "index.html": "/static/index.html",
+    "static/css/main.6dd46b3d.chunk.css.map": "/static/static/css/main.6dd46b3d.chunk.css.map",
+    "static/js/2.13a848ae.chunk.js.LICENSE.txt": "/static/static/js/2.13a848ae.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.c6ecaed8.js",
-    "static/js/2.e77068e9.chunk.js",
+    "static/js/runtime-main.2d999540.js",
+    "static/js/2.13a848ae.chunk.js",
     "static/css/main.6dd46b3d.chunk.css",
     "static/js/main.ec10d8dc.chunk.js"
   ]
