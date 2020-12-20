@@ -18,13 +18,35 @@
 .sidebar {
     background: blue;
     order: 2;
-    flex: 0 0 50%;
+    flex: 0;
 }
 
 .content-area {
     background: green;
     order: 3;
     flex-grow: 1;
+}
+
+@media screen and (max-width: 700px) {
+  .header {
+      background: purple;
+      order: 1;
+      display: flex;
+      align-items: center;
+      flex: 0;
+  }
+  .sidebar {
+      background: salmon;
+      order: 2;
+      flex: 1;
+      flex-wrap:wrap;
+      flex-direction: row;
+  }
+  .content-area {
+      background: tan;
+      order: 3 ;
+      flex: 100%;
+  }
 }
 
 .interactive{
