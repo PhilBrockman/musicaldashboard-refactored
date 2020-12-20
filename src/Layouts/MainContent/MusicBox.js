@@ -2,7 +2,7 @@ import Input from '@material-ui/core/Input';
 import Button from '@material-ui/core/Button';
 import FiberNewTwoToneIcon from '@material-ui/icons/FiberNewTwoTone';
 
-import TransitionHover from './IconHovered'
+import TransitionHover from '../IconHovered'
 
 import "./MusicBox.css";
 import "./checkbox.scss";

@@ -3,7 +3,7 @@ import NotListedLocationTwoToneIcon from '@material-ui/icons/NotListedLocationTw
 
 
 import MusicBoxInput from "./MusicBoxInput";
-import TransitionHover from './IconHovered'
+import TransitionHover from '../IconHovered'
 import React, {Component} from 'react';
 
 class InputHeader extends Component {
@@ -35,7 +35,7 @@ class InputHeader extends Component {
           </div>
           <div>
             <TransitionHover>
-              <NotListedLocationTwoToneIcon color="primary" />
+              <NotListedLocationTwoToneIcon color="secondary" />
             </TransitionHover>
           </div>
         </div>

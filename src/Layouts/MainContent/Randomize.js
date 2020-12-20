@@ -1,6 +1,6 @@
 import "./Randomize.css"
 import Casino from '@material-ui/icons/Casino';
-import TransitionHover from './IconHovered'
+import TransitionHover from '../IconHovered'
 import React, {Component} from 'react'
 import ReactDOM from 'react-dom';
 
