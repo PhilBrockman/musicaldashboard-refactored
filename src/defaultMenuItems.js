@@ -34,7 +34,7 @@ class defaults {
       ]
     },
     {
-      title: "slightly better",
+      title: "Shape & Form",
       icon: { name: "playlist_add" },
       children: [
         {
@@ -61,7 +61,7 @@ class defaults {
       ]
     },
     {
-      title: 'Additional Options',
+      title: 'Fine Tuning',
       icon: { name: 'queue_music' },
       children: [
         {

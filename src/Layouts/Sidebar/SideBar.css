@@ -13,8 +13,6 @@
 @media screen and (max-width: 760px) {
   .sidebar {
     display: flex;
-    flex-direction: row;
-    max-width: none;
     justify-content: space-evenly;
   }
   .sidebar.closed{

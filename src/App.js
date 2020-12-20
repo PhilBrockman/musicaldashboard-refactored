@@ -64,7 +64,6 @@ class App extends Component {
 
 
   randomizeState(){
-    console.log(this.state)
     const options = defaults.to_arr(defaults.menu_items());
 
     const randTitle = options[Math.floor(Math.random()*options.length)].title
@@ -105,10 +104,7 @@ class App extends Component {
     this.setState( {
       menuItems: shuffle(newState),
       sidebarOpen: true,
-
-    }, () => console.log(this.state))
-
-
+    })
   }
 
   handleMenuItemDismissal(title){

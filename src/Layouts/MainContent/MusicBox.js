@@ -53,6 +53,7 @@ class MusicBox extends Component {
           </span>
           <span>
             <Input
+              className="inputemail"
               placeholder="Enter email..."
               />
             <Button

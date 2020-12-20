@@ -92,7 +92,7 @@
 }
 
 .exit {
-  background-color: blue;
+  display:none;
   transform: scaleY(0);
   transform-origin: top;
   transition: transform 0.26s ease;

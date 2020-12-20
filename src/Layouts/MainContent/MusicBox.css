@@ -8,6 +8,11 @@
   transition: transform 0.26s ease;
 }
 
+input.inputemail {
+  color:red;
+  border-color: green;
+}
+
 button.submitbutton {
   background-color: #482880;
   color: #b2a300;

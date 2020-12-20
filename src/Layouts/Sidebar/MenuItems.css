@@ -25,12 +25,6 @@ div.offset {
 }
 
 @media screen and (max-width: 760px) {
-  .menuItem {
-    transform-origin: top;
-    transition: transform 0.26s ease;
-    justify-content: space-evenly;
-    border-radius: 15px;
-  }
 
   div.label {
     flex-direction: row;
@@ -41,10 +35,6 @@ div.offset {
 
   div.offset {
     padding-left: 10px;
-  }
-
-  .menuItemContainer {
-    border-style: none;
   }
 }
 
