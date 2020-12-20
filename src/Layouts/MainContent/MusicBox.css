@@ -7,6 +7,11 @@
   transform-origin: bottom;
   transition: transform 0.26s ease;
 }
+
+button.submitbutton {
+  background-color: #482880;
+  color: #b2a300;
+}
 @media only screen and (max-width: 760px) {
 .music-box{
   margin: 0;

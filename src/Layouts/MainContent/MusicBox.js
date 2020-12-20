@@ -3,6 +3,7 @@ import Button from '@material-ui/core/Button';
 import FiberNewTwoToneIcon from '@material-ui/icons/FiberNewTwoTone';
 
 import TransitionHover from '../IconHovered'
+import purple from '@material-ui/core/colors/purple';
 
 import "./MusicBox.css";
 import "./checkbox.scss";
@@ -56,7 +57,7 @@ class MusicBox extends Component {
               />
             <Button
               variant="contained"
-              color="primary">
+              className="submitbutton">
               create</Button>
           </span>
         </div>
