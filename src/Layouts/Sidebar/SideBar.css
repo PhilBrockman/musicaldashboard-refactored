@@ -9,11 +9,12 @@
   transition-timing-function: ease;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 760px) {
   .sidebar {
     display: flex;
     flex-direction: row;
     max-width: none;
+    justify-content: space-evenly;
   }
   .sidebar.closed{
     width:inherit;
@@ -21,5 +22,13 @@
 
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
+  .sidebar {
+    flex-shrink: 5;
+  }
+  .sidebar.open {
+    display: flex;
+    flex-direction: column;
+  }
+
 }

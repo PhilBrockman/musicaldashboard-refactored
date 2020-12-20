@@ -3,12 +3,29 @@ import './index.css';
 import "./Layouts/Sidebar/SideBar.css"
 
 import Header from './Layouts/Header/Header';
-import MenuItems from "./Layouts/Sidebar/MenuItems"
-import MusicBox from "./Layouts/MainContent/MusicBox"
-import React, {Component} from 'react'
+import MenuItems from "./Layouts/Sidebar/MenuItems";
+import MusicBox from "./Layouts/MainContent/MusicBox";
+import React, {Component} from 'react';
 
-import defaults from './defaultMenuItems'
+import defaults from './defaultMenuItems';
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
 
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
 
 function getRandomSubarray(arr, size) {
     var shuffled = arr.slice(0), i = arr.length, temp, index;
@@ -86,7 +103,7 @@ class App extends Component {
     })
 
     this.setState( {
-      menuItems: newState,
+      menuItems: shuffle(newState),
       sidebarOpen: true,
 
     }, () => console.log(this.state))
@@ -142,27 +159,29 @@ class App extends Component {
     var exploded_menu_items = this.state.menuItems.filter(item => !item.stowed)
 
     return (
-      <div className="App">
-        <Header toggleSidebar={this.handleViewSidebar} sidebarOpen={this.state.sidebarOpen} />
+        <div className="App">
+          <Header toggleSidebar={this.handleViewSidebar} sidebarOpen={this.state.sidebarOpen} />
 
-        <div className={sidebarClass}>
-          <MenuItems
-            invokedMenuItems={exploded_menu_items}
-            menuOpen={this.state.sidebarOpen}
-            clickback={this.handleMenuItemDismissal}>
-            {defaults.menu_items()}
-          </MenuItems>
+          <div className={sidebarClass}>
+            <MenuItems
+              invokedMenuItems={exploded_menu_items}
+              menuOpen={this.state.sidebarOpen}
+              clickback={this.handleMenuItemDismissal}>
+              {defaults.menu_items()}
+            </MenuItems>
+          </div>
+          <div className="content-area">
+            <MusicBox
+              invokedMenuItems={exploded_menu_items}
+              clickback={this.handleMenuItemDismissal}
+              updateValue={this.updateMenuItemValue}
+              resetState={this.resetState}
+              randomizeState={this.randomizeState}/>
+          </div>
+
+
+
         </div>
-        
-        <div className="content-area">
-          <MusicBox
-            invokedMenuItems={exploded_menu_items}
-            clickback={this.handleMenuItemDismissal}
-            updateValue={this.updateMenuItemValue}
-            resetState={this.resetState}
-            randomizeState={this.randomizeState}/>
-        </div>
-      </div>
     );
   }
 }

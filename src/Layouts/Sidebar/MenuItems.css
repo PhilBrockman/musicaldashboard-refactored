@@ -4,13 +4,13 @@
   background-color: grey;
   transform-origin: top;
   transition: transform 0.26s ease;
+  background-color:#482880;
+  color:#ffee33;
 }
 
 div.label {
   display: flex;
-  color:maroon;
   align-items: center;
-  background-color:orange;
   padding: 5px;
 }
 
@@ -19,10 +19,10 @@ div.offset {
 }
 
 .menuItemContainer {
-  border-style: outset;
+  border-radius: 10px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 760px) {
   .menuItem {
     transform-origin: top;
     transition: transform 0.26s ease;
@@ -32,9 +32,7 @@ div.offset {
   div.label {
     flex-direction: row;
     display: flex;
-    color:white;
     align-items: center;
-    background-color:black;
     justify-content: space-evenly;
   }
 
@@ -44,5 +42,12 @@ div.offset {
 
   .menuItemContainer {
     border-style: none;
+  }
+}
+
+@media screen and (max-width: 600px){
+
+  div.label {
+    justify-content: left;
   }
 }

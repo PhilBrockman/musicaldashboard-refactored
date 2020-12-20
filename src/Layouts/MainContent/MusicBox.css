@@ -1,14 +1,13 @@
 .music-box {
-  background-color:magenta;
   flex-grow: 1;
-  margin: 27px;
+  padding: 27px;
   border-radius: 15px;
   display:flex;
   flex-direction: column;
   transform-origin: bottom;
   transition: transform 0.26s ease;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 760px) {
 .music-box{
   margin: 0;
 }
@@ -18,8 +17,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 20px;
-  margin: 10px;
-  background-color: aqua;
+  background-color: #482880;
   flex-grow: 1;
   vertical-align: middle;
   display: flex;
@@ -28,15 +26,23 @@
 
 .centered-header {
   text-align: center;
-  background-color:green;
+  background-color:#673ab7;
   display: flex;
   align-items: center;
   justify-content: center;
+  color:#ffee33;
+}
+
+.centered-header {
+  border-radius: 10px;
 }
 
 .centered-header div {
   margin: 3px;
   padding: 5px;
+}
+.submit-form.centered-header {
+  border-radius: 20px;
 }
 
 .submit-form{

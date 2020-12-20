@@ -40,7 +40,7 @@ class MusicBox extends Component {
     })
 
     if(relevant.length === 0){
-      relevant =  (<div className="placeholder">Customize your song</div>);
+      relevant =  (<div className="placeholder"></div>);
       gen_and_send = null;
     } else{
       gen_and_send = (

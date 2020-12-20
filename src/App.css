@@ -3,12 +3,15 @@
   flex-wrap: wrap;
 }
 
-.header {
-    background: red;
+.header{
+    background: green;
     order: 1;
     flex: 0 0 100%;
-    display: flex;
-    align-items: center;
+}
+.header-content{
+  background-color: red;
+  display: flex;
+  align-items: center;
 }
 .header div {
   background-color: green;
@@ -16,21 +19,21 @@
 
 
 .sidebar {
-    background: blue;
+    background: #81c784;
     order: 2;
     flex: 0;
 }
 
 .content-area {
-    background: green;
+    background: #81c784;
     order: 3;
     flex-grow: 1;
     flex: 50%;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 760px) {
   .header {
-      background: purple;
+      background: green;
       order: 1;
 
       align-items: center;
@@ -42,11 +45,34 @@
     flex:  1 ;
     flex-direction: row;
     flex-grow:8;
-    background: salmon;
   }
   .content-area {
       order: 3 ;
       flex: 100%;
+  }
+  .header {
+    background-color: red;
+    align-items: flex-start;
+  }
+}
+@media screen and (max-width: 600px) {
+  .App{
+    flex-direction:column;
+  }
+  .header div {
+    background-color: green;
+  }
+  .header {
+    background: green;
+  }
+  .sidebar.closed {
+    background:#482880;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .header .mood {
+    background-color: red;
   }
 }
 

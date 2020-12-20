@@ -5,4 +5,5 @@
   max-width: 499px;
   min-width: 300px;
   flex-grow: 1;
+  border-radius: 15px;
 }

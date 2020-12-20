@@ -12,11 +12,13 @@ class Header extends Component {
 
     return (
       <div className="header">
-        <div>
-          <IconButton onClick={this.props.toggleSidebar} className="sidebar-toggle">{conditional_icon}</IconButton>
-        </div>
-        <div>
-          <Mood />
+        <div className="header-content">
+          <div>
+            <IconButton onClick={this.props.toggleSidebar} className="sidebar-toggle">{conditional_icon}</IconButton>
+          </div>
+          <div className="mood">
+            <Mood />
+          </div>
         </div>
       </div>
     );
