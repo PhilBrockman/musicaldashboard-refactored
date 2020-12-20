@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/musicaldashboard-refactored/static/css/main.6dd46b3d.chunk.css",
-    "main.js": "/musicaldashboard-refactored/static/js/main.e8136793.chunk.js",
-    "main.js.map": "/musicaldashboard-refactored/static/js/main.e8136793.chunk.js.map",
+    "main.js": "/musicaldashboard-refactored/static/js/main.ec10d8dc.chunk.js",
+    "main.js.map": "/musicaldashboard-refactored/static/js/main.ec10d8dc.chunk.js.map",
     "runtime-main.js": "/musicaldashboard-refactored/static/js/runtime-main.c6ecaed8.js",
     "runtime-main.js.map": "/musicaldashboard-refactored/static/js/runtime-main.c6ecaed8.js.map",
     "static/js/2.e77068e9.chunk.js": "/musicaldashboard-refactored/static/js/2.e77068e9.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.c6ecaed8.js",
     "static/js/2.e77068e9.chunk.js",
     "static/css/main.6dd46b3d.chunk.css",
-    "static/js/main.e8136793.chunk.js"
+    "static/js/main.ec10d8dc.chunk.js"
   ]
 }
