@@ -5,6 +5,7 @@ import "./Layouts/Sidebar/SideBar.css"
 import Header from './Layouts/Header/Header';
 import MenuItems from "./Layouts/Sidebar/MenuItems";
 import MusicBox from "./Layouts/MainContent/MusicBox";
+
 import React, {Component} from 'react';
 
 import defaults from './defaultMenuItems';

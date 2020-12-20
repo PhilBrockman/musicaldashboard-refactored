@@ -4,19 +4,25 @@
 }
 
 .header{
-    background: green;
-    order: 1;
-    flex: 0 0 100%;
+  order: 1;
+  flex: 0 0 100%;
 }
 .header-content{
   display: flex;
   align-items: center;
 }
-.header div {
+.header-content {
   background-color: #482880;
-  color: #ffee33;
 }
-
+.header-content div{
+  background-color: #482880 !important;
+}
+.header .MuiSvgIcon-colorSecondary {
+    color: #ffea00 !important;
+}
+.header .mood {
+  display: none;
+}
 
 .sidebar {
     background: #81c784;
@@ -35,7 +41,6 @@
   .header {
       background: green;
       order: 1;
-
       align-items: center;
       flex: 1 39px;
       flex-grow: 0;
@@ -54,8 +59,7 @@
     background-color: #81c784;
     align-items: flex-start;
   }
-  .header-content{
-
+  .header div {
     border-radius: 15px;
   }
 }
@@ -65,6 +69,14 @@
   }
   .header div {
     background-color: green;
+  }
+  .header .mood {
+    display: flex;
+    color: #388e3c;
+    background-color:cyan;
+  }
+  .header-content div{
+    background-color: green !important;
   }
   .header {
     background: green;
@@ -76,7 +88,7 @@
 
 @media screen and (max-width: 400px) {
   .header .mood {
-    background-color: red;
+    color: red;
   }
 }
 
@@ -85,7 +97,6 @@
   transition: all 0.3s ease-out;
   height:auto;
   flex: 1;
-  color: white;
   transform: scaleY(1);
   display:flex;
   align-items: center;
@@ -96,4 +107,8 @@
   transform: scaleY(0);
   transform-origin: top;
   transition: transform 0.26s ease;
+}
+
+.offset .menuItem .label{
+  color: #ffea00;
 }

@@ -11,9 +11,18 @@ class defaults {
           toParam: "composer",
           inputType: "select",
           options: [
-            "bach",
-            "mozart"
-          ]
+            'chopin',
+            'mozart',
+            'rachmaninoff',
+            'country',
+            'bach',
+            'beethoven',
+            'thebeatles',
+            'franksinatra',
+            'tchaikovsky'
+          ],
+          info_title: "Choose the style of music for MuseNet to select.",
+          info_body: "",
         },
         {
           title: "Instruments",
@@ -29,7 +38,9 @@ class defaults {
             'harp',
             'guitar',
             'bass',
-          ]
+          ],
+          info_title: "MuseNet will attempt to generate a song with the checked instruments.",
+          info_body: "",
         },
       ]
     },
@@ -46,6 +57,8 @@ class defaults {
           min: .5,
           max: 1.5,
           default: .9,
+          info_title: "Randomness during generation",
+          info_body: "A higher temperature will lead to more experimental outputs, while a smaller temperature might lead to overfitting.",
 
         },
         {
@@ -57,6 +70,8 @@ class defaults {
           min: 1,
           max: 6,
           default: 5,
+          info_title: "Output length",
+          info_body: "Automatically request output from MuseNet this many times.",
         },
       ]
     },
@@ -73,6 +88,8 @@ class defaults {
           min: 0,
           max: 1,
           default: .6,
+          info_title: "Higher values = more likely to fail",
+          info_body: "Define the minimum percentage confidence that a given generation is of a suitable quality. Only the best for you!",
         },
         {
           title: "Clip Length",
@@ -83,6 +100,8 @@ class defaults {
           min: 2,
           max: 20,
           default: 5,
+          info_title: "Higher values = more likely to succeed",
+          info_body: "When scanning for chunks of repeated music, set the window size of a chunk to this many seconds.",
         },
         {
           title: "Repetition Detection",
@@ -90,10 +109,11 @@ class defaults {
           stowed: true,
           toParam: "repeat_percentage",
           inputType: "slider",
-          inverted: true,
           min: 0,
           max: 1,
           default: .15,
+          info_title: "High values = more likely to succeed",
+          info_body: "Define the cutoff for the maximum percentage of a generation that can contain repeated sections.",
         },
       ]
     },

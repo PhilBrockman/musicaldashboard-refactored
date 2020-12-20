@@ -3,7 +3,6 @@ import Button from '@material-ui/core/Button';
 import FiberNewTwoToneIcon from '@material-ui/icons/FiberNewTwoTone';
 
 import TransitionHover from '../IconHovered'
-import purple from '@material-ui/core/colors/purple';
 
 import "./MusicBox.css";
 import "./checkbox.scss";
@@ -12,6 +11,36 @@ import Randomizer from "./Randomize"
 import InputHeader from "./InputHeader"
 
 import React, {Component} from 'react';
+
+
+import defaults from '../../defaultMenuItems'
+const options = defaults.to_arr(defaults.menu_items())
+
+function send_gen(parameters){
+  let musenet_options = (parameters.map(item => {
+    let found_item = options.find(spec => item.title===spec.title);
+    return [found_item.toParam, item.value]
+  }))
+
+  musenet_options = {
+    ...musenet_options,
+    email: document.getElementById("email").value,
+  }
+
+  const action = "https://www.1click2music.com/app/make_song"
+
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", action, true);
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.send(JSON.stringify(musenet_options));
+  xhr.onload = function() {
+    console.log("HELLO")
+    console.log(this.responseText);
+    var data = JSON.parse(this.responseText);
+    console.log(data);
+  }
+
+}
 
 class MusicBox extends Component {
   constructor(props) {
@@ -55,10 +84,12 @@ class MusicBox extends Component {
             <Input
               className="inputemail"
               placeholder="Enter email..."
+              id="email"
               />
             <Button
               variant="contained"
-              className="submitbutton">
+              className="submitbutton"
+              onClick={() => send_gen(this.props.invokedMenuItems)}>
               create</Button>
           </span>
         </div>

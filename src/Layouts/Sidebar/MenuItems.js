@@ -43,7 +43,9 @@ class MenuItem extends Component {
       invokedMenuItems={this.props.invokedMenuItems}
       clickback={this.clickback}>
     {this.props.item.children}
-    </MenuItems> : "";
+    </MenuItems> :
+                                      "";
+
     let icon    = this.props.item.hasOwnProperty("icon") ?  <Icon>{this.props.item.icon.name}</Icon>: "";
 
     //determine displaying all text or just label

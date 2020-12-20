@@ -18,14 +18,13 @@ button.submitbutton {
   color: #b2a300;
 }
 @media only screen and (max-width: 760px) {
-.music-box{
-  margin: 0;
-}
+  .music-box{
+    margin: 0;
+  }
 }
 .MuiInput-underline:after {
   border-bottom-color: #b2a300 !important;
 }
-
 .playarea {
   margin-top: 10px;
   padding:10px;
@@ -45,7 +44,7 @@ button.submitbutton {
   display: flex;
   align-items: center;
   justify-content: center;
-  color:#ffee33;
+  color:#ffb74d;
 }
 
 .centered-header {
