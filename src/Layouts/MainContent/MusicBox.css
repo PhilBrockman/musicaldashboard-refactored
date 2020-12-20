@@ -8,6 +8,11 @@
   transform-origin: bottom;
   transition: transform 0.26s ease;
 }
+@media only screen and (max-width: 768px) {
+.music-box{
+  margin: 0;
+}
+}
 
 .playarea {
   align-items: center;
@@ -35,14 +40,33 @@
 }
 
 .submit-form{
-  zoom: 2.5;
-  -moz-transform: scale(2.5);
+  zoom: 2;
+  -moz-transform: scale(2);
   -moz-transform-origin: 0 0;
 }
 
 .placeholder{
-  zoom: 2.5;
-  -moz-transform: scale(2.5);
+  zoom: 2;
+  -moz-transform: scale(2);
   -moz-transform-origin: 0 0;
   color: gray;
+}
+
+.options-have-been-selected{
+  display:flex;
+  align-items: center;
+}
+
+.custom-checkbox{
+  display:flex;
+  flex-wrap: wrap;
+}
+
+label.checkbox{
+  padding: 5px;
+  width: 30%;
+}
+
+.only-element{
+  zoom: 4;
 }

@@ -1,6 +1,30 @@
-.content-area {
-  background-color: #6A0174;
+.App{
   display:flex;
+  flex-wrap: wrap;
+}
+
+.header {
+    background: red;
+    order: 1;
+    flex: 0 0 100%;
+    display: flex;
+    align-items: center;
+}
+.header div {
+  background-color: green;
+}
+
+
+.sidebar {
+    background: blue;
+    order: 2;
+    flex: 0 0 50%;
+}
+
+.content-area {
+    background: green;
+    order: 3;
+    flex-grow: 1;
 }
 
 .interactive{

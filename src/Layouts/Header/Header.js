@@ -1,5 +1,3 @@
-import "./Header.css"
-
 import IconButton from '@material-ui/core/IconButton';
 import FormatIndentIncrease from '@material-ui/icons/FormatIndentIncrease';
 import FormatIndentDecrease from '@material-ui/icons/FormatIndentDecrease';
