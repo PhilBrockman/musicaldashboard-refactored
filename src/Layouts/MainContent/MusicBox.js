@@ -1,6 +1,6 @@
 import Input from '@material-ui/core/Input';
 import Button from '@material-ui/core/Button';
-import Refresh from '@material-ui/icons/Refresh';
+import FiberNewTwoToneIcon from '@material-ui/icons/FiberNewTwoTone';
 
 import TransitionHover from './IconHovered'
 
@@ -45,20 +45,21 @@ class MusicBox extends Component {
     } else{
       gen_and_send = (
         <div className="options-have-been-selected">
-          <Input
-            placeholder="Enter email..."
-            />
-          <Button
-            variant="contained"
-            color="primary">
-            create</Button>
-
-            <span className="refresher">
-              <TransitionHover>
-                <Refresh onClick={(event) => this.resetStateHandler()} />
-              </TransitionHover>
-            </span>
-          </div>
+          <span className="refresher">
+            <TransitionHover>
+              <FiberNewTwoToneIcon color="secondary" onClick={(event) => this.resetStateHandler()} />
+            </TransitionHover>
+          </span>
+          <span>
+            <Input
+              placeholder="Enter email..."
+              />
+            <Button
+              variant="contained"
+              color="primary">
+              create</Button>
+          </span>
+        </div>
         );
     }
 
@@ -70,12 +71,13 @@ class MusicBox extends Component {
     return (
       <div className="music-box">
         <div className="submit-form centered-header">
+          {gen_and_send}
+
           <Randomizer
             scale={scale}
             updateValue={this.updateValue}
             toggleMenuItems={this.dissmissMenuItem}
             randomizeState={this.randomizeState}/>
-          {gen_and_send}
         </div>
         <div className="playarea">
           {relevant}

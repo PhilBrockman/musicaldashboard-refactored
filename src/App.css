@@ -25,31 +25,26 @@
     background: green;
     order: 3;
     flex-grow: 1;
+    flex: 50%;
 }
 
 @media screen and (max-width: 700px) {
   .header {
       background: purple;
       order: 1;
-      display: flex;
+
       align-items: center;
       flex: 1 39px;
       flex-grow: 0;
   }
-  .sidebar.open{
-    flex-grow: 1;
-    justify:right;
-
-  }
-  .sidebar.closed {
-      background: salmon;
-      order: 2;
-      flex:  1 ;
-      flex-direction: row;
-      flex-grow:8;
+  .sidebar{
+    order: 2;
+    flex:  1 ;
+    flex-direction: row;
+    flex-grow:8;
+    background: salmon;
   }
   .content-area {
-      background: tan;
       order: 3 ;
       flex: 100%;
   }

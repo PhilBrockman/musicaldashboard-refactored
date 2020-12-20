@@ -1,5 +1,4 @@
 .sidebar.open {
-    max-width: 220px;
 }
 .sidebar.closed {
   width: 50px;
@@ -14,6 +13,7 @@
   .sidebar {
     display: flex;
     flex-direction: row;
+    max-width: none;
   }
   .sidebar.closed{
     width:inherit;
