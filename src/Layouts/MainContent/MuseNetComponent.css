@@ -1,9 +1,14 @@
 .MuseNetComponent{
-  background-color: gray;
+  background-color: #b1f7b4;
   padding: 5px;
   margin: 5px;
   max-width: 499px;
   min-width: 300px;
   flex-grow: 1;
   border-radius: 15px;
+}
+
+.MuseNetComponent select{
+  display: block;
+  margin: 0 auto;
 }

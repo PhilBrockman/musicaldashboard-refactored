@@ -40,13 +40,14 @@ class MusicBoxInput extends Component {
 
     if(specific_item.inputType === "slider"){
       const step_size = specific_item.max < 3 ? .01 : 1;
-
+      const inverted = specific_item.hasOwnProperty("inverted") ? "inverted" : null;
       return(
         <div>
         <Slider
           value={this.props.item.value}
           min={specific_item.min}
           max={specific_item.max}
+          track={inverted}
           onChange={(e,val) => this.handleChange(e,val)}
           aria-labelledby="continuous-slider"
           valueLabelDisplay="auto"
@@ -63,7 +64,7 @@ class MusicBoxInput extends Component {
           </option>
         ))
         return(
-          <div>
+          <div className="section-area">
             <select
               className="select"
               value={this.props.item.value}
@@ -100,7 +101,7 @@ class MusicBoxInput extends Component {
           );
         });
         return (
-          <div key="aoeu" className="custom-control custom-checkbox ">
+          <div className="custom-control custom-checkbox ">
             {option_list}
           </div>
         );

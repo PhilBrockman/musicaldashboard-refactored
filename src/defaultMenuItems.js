@@ -90,6 +90,7 @@ class defaults {
           stowed: true,
           toParam: "repeat_percentage",
           inputType: "slider",
+          inverted: true,
           min: 0,
           max: 1,
           default: .15,

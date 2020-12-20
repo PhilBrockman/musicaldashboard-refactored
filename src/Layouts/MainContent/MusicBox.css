@@ -22,6 +22,9 @@ button.submitbutton {
   margin: 0;
 }
 }
+.MuiInput-underline:after {
+  border-bottom-color: #b2a300 !important;
+}
 
 .playarea {
   margin-top: 10px;
@@ -78,6 +81,7 @@ button.submitbutton {
 .custom-checkbox{
   display:flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 label.checkbox{
