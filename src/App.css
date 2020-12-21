@@ -1,3 +1,7 @@
+body{
+  background-color:#482880
+}
+
 .App{
   display:flex;
   flex-wrap: wrap;
@@ -111,4 +115,16 @@
 
 .offset .menuItem .label{
   color: #ffea00;
+}
+
+.options-have-been-selected span{
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 860px) {
+  .options-have-been-selected span{
+    display: flex;
+    flex-direction: column;
+  }
 }

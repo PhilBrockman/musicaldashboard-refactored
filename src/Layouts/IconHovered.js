@@ -26,7 +26,8 @@ const StyledIcon = styled(Icon)`
     duration: theme.transitions.duration.standard,
   })};
   &:hover {
-    transform: scale(2);
+    transform: scale(2, 2);
+    -webkit-transform:scale(2,2);
   }
   `}
 `;

@@ -1,7 +1,6 @@
-import Input from '@material-ui/core/Input';
+import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import FiberNewTwoToneIcon from '@material-ui/icons/FiberNewTwoTone';
-
 import TransitionHover from '../IconHovered'
 
 import "./MusicBox.css";
@@ -9,20 +8,10 @@ import "./checkbox.scss";
 import "./MuseNetComponent.css"
 import Randomizer from "./Randomize"
 import InputHeader from "./InputHeader"
-
 import React, {Component} from 'react';
-
 
 import defaults from '../../defaultMenuItems'
 const options = defaults.to_arr(defaults.menu_items())
-
-// this.setState({ loading: true }, () => {
-//     Axios.get('/endpoint')
-//       .then(result => this.setState({
-//         loading: false,
-//         data: [...result.data],
-//       }));
-//   });
 
 class MusicBox extends Component {
   constructor(props) {
@@ -34,8 +23,7 @@ class MusicBox extends Component {
     this.randomizeState   = this.props.randomizeState.bind(this);
 
     this.state = {
-      loading: false,
-      response_status: null,
+      error_text: null
     }
   }
 
@@ -44,6 +32,11 @@ class MusicBox extends Component {
   }
 
   send_gen(parameters){
+    if(!document.getElementById("email").value.includes("@")){
+      this.setState({error_text: "invalid email format"})
+      return;
+    }
+
     var dict = {}
     options.forEach(item => {
       let found_item = parameters.find(spec => item.title===spec.title);
@@ -52,25 +45,23 @@ class MusicBox extends Component {
     })
 
     dict["email"] = document.getElementById("email").value
-    const action = "http://0.0.0.0:5000/app/make_song/pretty"
+    const action = "https://1click2music.com/app/make_song/pretty"
 
     console.log(JSON.stringify(dict))
 
-    this.setState({loading: true}, () => {
-      fetch(action, {
-        method: 'POST',
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(dict)
-      }).then(response => this.setState({
-        loading: false,
-        response_status: response.status,
-      }))
+    fetch(action, {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(dict)
+    }).then(response => {
+      if (response.status ===  200){
+        let success_url = "https://www.1click2music.com/sent_email"
+        window.location.href = (success_url);
+      }
     })
-
-
   }
 
   render() {
@@ -97,12 +88,14 @@ class MusicBox extends Component {
               <FiberNewTwoToneIcon color="secondary" onClick={(event) => this.resetStateHandler()} />
             </TransitionHover>
           </span>
-          {this.state.loading} {this.state.response_status}
           <span>
-            <Input
+            <TextField
               className="inputemail"
               placeholder="Enter email..."
               id="email"
+              helperText={this.state.error_text}
+              label={this.state.error_text === null ? "": "Error"}
+              variant="outlined"
               />
             <Button
               variant="contained"
@@ -130,7 +123,7 @@ class MusicBox extends Component {
             toggleMenuItems={this.dissmissMenuItem}
             randomizeState={this.randomizeState}/>
         </div>
-        <div className="playarea">
+        <div className={"playarea " + scale}>
           {relevant}
         </div>
       </div>

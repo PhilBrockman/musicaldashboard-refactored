@@ -8,6 +8,14 @@
   transition: transform 0.26s ease;
 }
 
+#email-label{
+  color:red !important;
+}
+
+p.MuiFormHelperText-root{
+  color: red;
+}
+
 input.inputemail {
   color:red;
   border-color: green;
@@ -61,13 +69,13 @@ button.submitbutton {
 
 .submit-form{
   zoom: 2;
-  -moz-transform: scale(2);
+  -moz-transform: scale(2, 2);
   -moz-transform-origin: 0 0;
 }
 
 .placeholder{
   zoom: 2;
-  -moz-transform: scale(2);
+  -moz-transform: scale(2, 2);
   -moz-transform-origin: 0 0;
   color: gray;
 }
@@ -88,6 +96,6 @@ label.checkbox{
   width: 30%;
 }
 
-.only-element{
-  zoom: 4;
+.playarea.only-element{
+  display:none;
 }
