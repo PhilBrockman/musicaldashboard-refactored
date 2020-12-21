@@ -16,31 +16,13 @@ import React, {Component} from 'react';
 import defaults from '../../defaultMenuItems'
 const options = defaults.to_arr(defaults.menu_items())
 
-function send_gen(parameters){
-  let musenet_options = (parameters.map(item => {
-    let found_item = options.find(spec => item.title===spec.title);
-    return [found_item.toParam, item.value]
-  }))
-
-  musenet_options = {
-    ...musenet_options,
-    email: document.getElementById("email").value,
-  }
-
-  const action = "https://www.1click2music.com/app/make_song"
-
-  var xhr = new XMLHttpRequest();
-  xhr.open("POST", action, true);
-  xhr.setRequestHeader('Content-Type', 'application/json');
-  xhr.send(JSON.stringify(musenet_options));
-  xhr.onload = function() {
-    console.log("HELLO")
-    console.log(this.responseText);
-    var data = JSON.parse(this.responseText);
-    console.log(data);
-  }
-
-}
+// this.setState({ loading: true }, () => {
+//     Axios.get('/endpoint')
+//       .then(result => this.setState({
+//         loading: false,
+//         data: [...result.data],
+//       }));
+//   });
 
 class MusicBox extends Component {
   constructor(props) {
@@ -50,10 +32,45 @@ class MusicBox extends Component {
     this.updateValue      = this.props.updateValue.bind(this);
     this.resetState       = this.props.resetState.bind(this);
     this.randomizeState   = this.props.randomizeState.bind(this);
+
+    this.state = {
+      loading: false,
+      response_status: null,
+    }
   }
 
   resetStateHandler(event) {
     this.resetState();
+  }
+
+  send_gen(parameters){
+    var dict = {}
+    options.forEach(item => {
+      let found_item = parameters.find(spec => item.title===spec.title);
+      console.log(item.title + " | found | " + found_item)
+      dict[item.toParam] = found_item ? found_item.value : item.default;
+    })
+
+    dict["email"] = document.getElementById("email").value
+    const action = "http://0.0.0.0:5000/app/make_song/pretty"
+
+    console.log(JSON.stringify(dict))
+
+    this.setState({loading: true}, () => {
+      fetch(action, {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(dict)
+      }).then(response => this.setState({
+        loading: false,
+        response_status: response.status,
+      }))
+    })
+
+
   }
 
   render() {
@@ -80,6 +97,7 @@ class MusicBox extends Component {
               <FiberNewTwoToneIcon color="secondary" onClick={(event) => this.resetStateHandler()} />
             </TransitionHover>
           </span>
+          {this.state.loading} {this.state.response_status}
           <span>
             <Input
               className="inputemail"
@@ -89,7 +107,7 @@ class MusicBox extends Component {
             <Button
               variant="contained"
               className="submitbutton"
-              onClick={() => send_gen(this.props.invokedMenuItems)}>
+              onClick={() => this.send_gen(this.props.invokedMenuItems)}>
               create</Button>
           </span>
         </div>

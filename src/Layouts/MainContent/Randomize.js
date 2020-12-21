@@ -2,11 +2,6 @@ import "./Randomize.css"
 import Casino from '@material-ui/icons/Casino';
 import TransitionHover from '../IconHovered'
 import React, {Component} from 'react'
-import ReactDOM from 'react-dom';
-
-
-import defaults from '../../defaultMenuItems'
-const options = defaults.to_arr(defaults.menu_items())
 
 class Randomizer extends Component {
   constructor(props){

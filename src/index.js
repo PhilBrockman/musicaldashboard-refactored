@@ -5,9 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from 'react-router-dom';
 
-const routerBaseName = "/static"//process.env.PUBLIC_URL;
-console.log("test")
-console.log("basename: " + routerBaseName)
+const routerBaseName = process.env.PUBLIC_URL;
 
 
 ReactDOM.render(

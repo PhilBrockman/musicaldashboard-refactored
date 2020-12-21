@@ -21,7 +21,8 @@ class defaults {
             'franksinatra',
             'tchaikovsky'
           ],
-          info_title: "Choose the style of music for MuseNet to select.",
+          default: 'beethoven',
+          info_title: "The style of music for MuseNet to select.",
           info_body: "",
         },
         {
@@ -39,6 +40,7 @@ class defaults {
             'guitar',
             'bass',
           ],
+          default: ['piano'],
           info_title: "MuseNet will attempt to generate a song with the checked instruments.",
           info_body: "",
         },
@@ -57,7 +59,7 @@ class defaults {
           min: .5,
           max: 1.5,
           default: .9,
-          info_title: "Randomness during generation",
+          info_title: "Higher value = more randomness in generation",
           info_body: "A higher temperature will lead to more experimental outputs, while a smaller temperature might lead to overfitting.",
 
         },
@@ -70,7 +72,7 @@ class defaults {
           min: 1,
           max: 6,
           default: 5,
-          info_title: "Output length",
+          info_title: "Higher value = longer output",
           info_body: "Automatically request output from MuseNet this many times.",
         },
       ]
@@ -88,7 +90,7 @@ class defaults {
           min: 0,
           max: 1,
           default: .6,
-          info_title: "Higher values = more likely to fail",
+          info_title: "Higher values = more scrunity of musical generations",
           info_body: "Define the minimum percentage confidence that a given generation is of a suitable quality. Only the best for you!",
         },
         {
@@ -100,7 +102,7 @@ class defaults {
           min: 2,
           max: 20,
           default: 5,
-          info_title: "Higher values = more likely to succeed",
+          info_title: "Lower values = more sensitive to repeats",
           info_body: "When scanning for chunks of repeated music, set the window size of a chunk to this many seconds.",
         },
         {
@@ -112,7 +114,7 @@ class defaults {
           min: 0,
           max: 1,
           default: .15,
-          info_title: "High values = more likely to succeed",
+          info_title: "Lower values = more unique musical sections",
           info_body: "Define the cutoff for the maximum percentage of a generation that can contain repeated sections.",
         },
       ]
