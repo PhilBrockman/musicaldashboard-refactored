@@ -85,9 +85,11 @@ class MusicBox extends Component {
     return (
       <div className="music-box">
         <div className="submit-form centered-header">
-          <TransitionHover>
-            <FiberNewTwoToneIcon color="secondary" onClick={(event) => this.resetStateHandler()} />
-          </TransitionHover>
+          <div className="new-button">
+            <TransitionHover>
+              <FiberNewTwoToneIcon color="secondary" onClick={(event) => this.resetStateHandler()} />
+            </TransitionHover>
+          </div>
           <TextField
             className="inputemail"
             placeholder="Enter email..."

@@ -6,7 +6,7 @@ import Button from '@material-ui/core/Button';
 const TOUR_STEPS = [
   {
     target: '.shaker',
-    content: 'Click the yellow die to randomize the initial configuration.',
+    content: 'Click to randomize the initial configuration of attributes/parameters.',
     disableBeacon:true,
     disableOverlayClose: true,
     spotlightClicks: true,
@@ -19,7 +19,7 @@ const TOUR_STEPS = [
   },
   {
     target: '.ditch-attribute',
-    content: 'Click to remove your customizations. ',
+    content: 'Click to remove this attribute. ',
     disableOverlayClose: true,
     spotlightClicks: true,
   },
@@ -37,7 +37,12 @@ const TOUR_STEPS = [
   },
   {
     target: 'input',
-    content: 'When you are satisfide with your customizations, enter your email and click create!',
+    content: 'When you are satisfide with your customizations, enter your email and click create! You will recieve your results in 5-25 minutes. ',
+    disableBeacon:true,
+  },
+  {
+    target: '.new-button',
+    content: 'Click to wipe all customization.',
     disableBeacon:true,
   }
 ];
