@@ -66,7 +66,7 @@ class defaults {
         {
           title: "Length",
           interactive: true,
-          stowed: true,
+          stowed: false,
           toParam: "length",
           inputType: "slider",
           min: 1,

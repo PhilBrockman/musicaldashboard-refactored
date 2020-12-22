@@ -18,11 +18,9 @@ class Randomizer extends Component {
 
   render(){
     return (
-      <div className={'shaker ' + this.props.scale}>
-        <TransitionHover>
-          <Casino onClick={() => this.handleClick()} color="secondary" />
-        </TransitionHover>
-      </div>
+        <div className={'shaker'}>
+            <Casino onClick={() => this.handleClick()} color="secondary" />
+        </div>
     );
   }
 }

@@ -5,6 +5,8 @@ import "./Layouts/Sidebar/SideBar.css"
 import Header from './Layouts/Header/Header';
 import MenuItems from "./Layouts/Sidebar/MenuItems";
 import MusicBox from "./Layouts/MainContent/MusicBox";
+import Tour from './Tour';
+import SplashScreen from './SplashScreen';
 
 import React, {Component} from 'react';
 
@@ -102,10 +104,10 @@ class App extends Component {
       }
     })
 
-    this.setState( {
+    this.setState(prevState => ({
+      ...prevState,
       menuItems: shuffle(newState),
-      sidebarOpen: true,
-    })
+    }))
   }
 
   handleMenuItemDismissal(title){
@@ -152,10 +154,12 @@ class App extends Component {
   }
 
   render(){
+    const {steps} = this.state;
     var sidebarClass = this.state.sidebarOpen ? 'sidebar open' : 'sidebar closed';
     var exploded_menu_items = this.state.menuItems.filter(item => !item.stowed)
 
     return (
+      <>
         <div className="App">
           <Header toggleSidebar={this.handleViewSidebar} sidebarOpen={this.state.sidebarOpen} />
 
@@ -175,10 +179,12 @@ class App extends Component {
               resetState={this.resetState}
               randomizeState={this.randomizeState}/>
           </div>
-
-
-
         </div>
+        <div className="tour-button">
+          <Tour />
+        </div>
+        <SplashScreen />
+        </>
     );
   }
 }

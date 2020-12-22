@@ -25,6 +25,12 @@ button.submitbutton {
   background-color: #482880;
   color: #b2a300;
 }
+
+button.tour-button{
+  background-color: #b2a300;
+  color: #482880;
+
+}
 @media only screen and (max-width: 760px) {
   .music-box{
     margin: 0;
@@ -58,31 +64,18 @@ button.submitbutton {
 .centered-header {
   border-radius: 10px;
 }
-
+.MuiFormControl-fullWidth{
+    width:50% !important;
+}
 .centered-header div {
   margin: 3px;
   padding: 5px;
 }
 .submit-form.centered-header {
   border-radius: 20px;
-}
-
-.submit-form{
-  zoom: 2;
-  -moz-transform: scale(2, 2);
-  -moz-transform-origin: 0 0;
-}
-
-.placeholder{
-  zoom: 2;
-  -moz-transform: scale(2, 2);
-  -moz-transform-origin: 0 0;
-  color: gray;
-}
-
-.options-have-been-selected{
   display:flex;
-  align-items: center;
+  justify-content: space-evenly;
+
 }
 
 .custom-checkbox{
@@ -98,4 +91,8 @@ label.checkbox{
 
 .playarea.only-element{
   display:none;
+}
+
+.shaker-container{
+
 }

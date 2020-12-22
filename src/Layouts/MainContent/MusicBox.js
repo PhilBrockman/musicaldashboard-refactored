@@ -8,6 +8,7 @@ import "./checkbox.scss";
 import "./MuseNetComponent.css"
 import Randomizer from "./Randomize"
 import InputHeader from "./InputHeader"
+
 import React, {Component} from 'react';
 
 import defaults from '../../defaultMenuItems'
@@ -77,51 +78,37 @@ class MusicBox extends Component {
       );
     })
 
-    if(relevant.length === 0){
-      relevant =  (<div className="placeholder"></div>);
-      gen_and_send = null;
-    } else{
-      gen_and_send = (
-        <div className="options-have-been-selected">
-          <span className="refresher">
-            <TransitionHover>
-              <FiberNewTwoToneIcon color="secondary" onClick={(event) => this.resetStateHandler()} />
-            </TransitionHover>
-          </span>
-          <span>
-            <TextField
-              className="inputemail"
-              placeholder="Enter email..."
-              id="email"
-              helperText={this.state.error_text}
-              label={this.state.error_text === null ? "": "Error"}
-              variant="outlined"
-              />
-            <Button
-              variant="contained"
-              className="submitbutton"
-              onClick={() => this.send_gen(this.props.invokedMenuItems)}>
-              create</Button>
-          </span>
-        </div>
-        );
-    }
 
-    let scale = null
-    if(!gen_and_send){
-      scale = "only-element"
-    }
+    let scale = !this.props.invokedMenuItems.length > 0 ? "only-element" : "";
+
 
     return (
       <div className="music-box">
         <div className="submit-form centered-header">
-          {gen_and_send}
-
-          <Randomizer
-            scale={scale}
-            updateValue={this.updateValue}
-            toggleMenuItems={this.dissmissMenuItem}
-            randomizeState={this.randomizeState}/>
+          <TransitionHover>
+            <FiberNewTwoToneIcon color="secondary" onClick={(event) => this.resetStateHandler()} />
+          </TransitionHover>
+          <TextField
+            className="inputemail"
+            placeholder="Enter email..."
+            id="email"
+            helperText={this.state.error_text}
+            label={this.state.error_text === null ? "": "Error"}
+            variant="outlined"
+            fullWidth
+            />
+          <Button
+            variant="contained"
+            className="submitbutton"
+            onClick={() => this.send_gen(this.props.invokedMenuItems)}>
+            create
+          </Button>
+          <div className="shaker-container">
+            <Randomizer
+              updateValue={this.updateValue}
+              toggleMenuItems={this.dissmissMenuItem}
+              randomizeState={this.randomizeState}/>
+          </div>
         </div>
         <div className={"playarea " + scale}>
           {relevant}

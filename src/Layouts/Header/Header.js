@@ -16,7 +16,7 @@ class Header extends Component {
     return (
       <div className="header">
         <div className="header-content">
-          <div>
+          <div className="sidebar-toggler">
 
             <IconButton onClick={this.props.toggleSidebar} className="sidebar-toggle">{conditional_icon}</IconButton>
 

@@ -49,7 +49,7 @@ class InputHeader extends Component {
         body={specific_item.info_body}
         />
         <div className="mnc-header centered-header">
-          <div>
+          <div className="ditch-attribute">
             <TransitionHover>
               <RemoveCircle
                 color="secondary"
@@ -60,7 +60,7 @@ class InputHeader extends Component {
           <div>
             {this.props.item.title}
           </div>
-          <div>
+          <div className = "ask-for-help">
             <IconButton
               onClick={() => this.boundShowToaster(!this.state.open)}>
                 <TransitionHover>
