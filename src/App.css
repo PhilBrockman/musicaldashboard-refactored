@@ -1,0 +1,134 @@
+body{
+  background-color:#482880
+}
+
+.App{
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.header{
+  order: 1;
+  flex: 0 0 100%;
+}
+.header-content{
+  display: flex;
+  align-items: center;
+}
+.header-content {
+  background-color: #482880;
+}
+.header-content div{
+  background-color: #482880 !important;
+}
+.header .MuiSvgIcon-colorSecondary {
+    color: #ffea00 !important;
+}
+.header .mood {
+  display: none;
+}
+
+.sidebar {
+    background: #81c784;
+    order: 2;
+    flex: 0;
+}
+
+.content-area {
+    background: #81c784;
+    order: 3;
+    flex-grow: 1;
+    flex: 50%;
+}
+
+@media screen and (max-width: 760px) {
+  .header {
+      background: green;
+      order: 1;
+      align-items: center;
+      flex: 1 39px;
+      flex-grow: 0;
+  }
+  .sidebar{
+    order: 2;
+    flex:  1 ;
+    flex-direction: row;
+    flex-grow:8;
+  }
+  .content-area {
+      order: 3 ;
+      flex: 100%;
+  }
+  .header {
+    background-color: #81c784;
+    align-items: flex-start;
+  }
+  .header div {
+    border-radius: 15px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .App{
+    flex-direction:column;
+  }
+  .header div {
+    background-color: green;
+  }
+  .header .mood {
+    display: flex;
+    color: #388e3c;
+    background-color:cyan;
+  }
+  .header-content div{
+    background-color: green !important;
+  }
+  .header {
+    background: green;
+  }
+  .sidebar.closed {
+    background:#482880;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .header .mood {
+    color: red;
+  }
+}
+
+.interactive{
+  overflow: hidden;
+  transition: all 0.3s ease-out;
+  height:auto;
+  flex: 1;
+  transform: scaleY(1);
+  display:flex;
+  align-items: center;
+}
+
+.exit {
+  display:none;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.26s ease;
+}
+
+.offset .menuItem .label{
+  color: #ffea00;
+}
+
+.options-have-been-selected span{
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 860px) {
+  .options-have-been-selected span{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.tour-button{
+  display:inline-block;
+}

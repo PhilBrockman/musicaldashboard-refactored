@@ -1,0 +1,78 @@
+.shaker{
+  cursor: pointer;
+}
+
+.shaker {
+  opacity: .3;
+  transform: rotate(-33deg    );
+  /* -webkit-animation-name: rot, pulse; */
+  /* -webkit-animation-duration: 2s, 4s; */
+  /* shake 0.82s cubic-bezier(.36,.07,.19,.97) both; */
+  /* animation-iteration-count: infinite; */
+  transition: .50s linear;
+}
+
+.shaker:hover {
+  opacity: 1;
+  transform: rotate(0deg);
+  transition: .10s linear;
+  /* animation-play-state: paused; */
+}
+
+@keyframes righten {
+  0% {
+  }
+
+  50% {
+    transform: scale(1.7);
+  }
+
+  100% {
+    transform:rotate(33deg);
+    transform: scale(1);
+  }
+}
+
+
+@keyframes pulse {
+  0% {
+    transform:rotate(544deg);
+  }
+
+  50% {
+    transform: scale(1.7);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes rot {
+  0% {
+    transform:rotate(0deg);
+  }
+
+  100% {
+    transform:rotate(359deg);
+  }
+}
+
+@keyframes shake {
+  10% {
+    transform: translate3d(0, -1px, 0);
+  }
+
+  20% {
+    transform: translate3d(1px, -2px, 0);
+  }
+
+  30%, 50%{
+    transform: translate3d(-3px, -3px, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(1px, 0, 0);
+  }
+
+}
